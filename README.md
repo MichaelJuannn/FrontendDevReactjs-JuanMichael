@@ -1,4 +1,4 @@
-# Project Name
+# React FE
 
 This project is built with React.js and Node.js.
 
