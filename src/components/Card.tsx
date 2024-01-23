@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Restaurant } from "../types"
 
 export default function Card({ restaurant }: { restaurant: Restaurant }) {
@@ -10,7 +11,7 @@ export default function Card({ restaurant }: { restaurant: Restaurant }) {
     ])
     return (
         <>
-            <div className=" max-w-sm rounded overflow-hidden shadow-lg m-2 bg-white">
+            <div className="relative max-w-sm h-80 rounded overflow-hidden shadow-lg m-2 bg-white">
                 <div className="px-6 py-4">
                     <img src={`https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}`} alt="" />
                     <div className="font-bold text-xl mb-2">{restaurant.name}</div>
@@ -23,10 +24,12 @@ export default function Card({ restaurant }: { restaurant: Restaurant }) {
                         </div>
                     </div>
                 </div>
-                <div className="px-6 pt-4 pb-2 ">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
-                        LEARN MORE
-                    </button>
+                <div className="px-6 pt-4 pb-2 absolute bottom-0 w-full">
+                    <Link to={`/${restaurant.id}`}>
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+                            LEARN MORE
+                        </button>
+                    </Link>
                 </div>
             </div>
         </>
