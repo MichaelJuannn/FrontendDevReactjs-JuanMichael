@@ -5,6 +5,8 @@ export type Restaurant = {
     pictureId: string;
     city: string;
     rating: number;
+    isOpen?: boolean;
+    price: number
 }
 
 export type RestaurantResponse = {
