@@ -11,9 +11,9 @@ export default function Card({ restaurant }: { restaurant: Restaurant }) {
     ])
     return (
         <>
-            <div className="relative max-w-sm h-80 rounded overflow-hidden shadow-lg m-2 bg-white">
+            <div className="relative max-w-sm h-96 rounded overflow-hidden shadow-lg m-2 bg-white">
                 <div className="px-6 py-4">
-                    <img src={`https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}`} alt="" />
+                    <img src={`https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}`} alt="" className="w-full h-40" />
                     <div className="font-bold text-xl mb-2">{restaurant.name} ({restaurant.isOpen ? "OPEN" : "CLOSED"})</div>
                     <div className="flex items-center">
                         <div className="text-sm">
